@@ -152,11 +152,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\CSSParser\CSSParser.h" />
+    <ClInclude Include="..\..\..\src\CodePoints.h" />
     <ClInclude Include="..\..\..\src\CommonTypes.h" />
     <ClInclude Include="..\..\..\src\CSSParserAssert.h" />
+    <ClInclude Include="..\..\..\src\Tokens.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\src\CodePoints.cpp" />
     <ClCompile Include="..\..\..\src\CSSParser.cpp" />
+    <ClCompile Include="..\..\..\src\Tokens.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

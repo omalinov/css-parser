@@ -26,4 +26,4 @@ SOFTWARE.
 
 #include <cassert>
 
-#define CSS_PARSER_ASSERT(condition, message) assert(condition && message)
+#define CSS_PARSER_ASSERT(condition, message) assert(condition && __FUNCTION__ message)

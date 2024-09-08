@@ -25,9 +25,13 @@ SOFTWARE.
 #include "CSSParser/CSSParser.h"
 
 #include <string>
+#include <iostream>
 
 int main()
 {
-	std::string text("body { width: 100px; }");
-	css_parser::Parse(text.c_str(), text.size());
+	std::string text("url(   \\t\\ABCD abc123   )");
+	if (!css_parser::Parse(text.c_str(), text.size()))
+	{
+		std::cerr << "Pasring error";
+	}
 }

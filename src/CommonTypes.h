@@ -24,15 +24,25 @@ SOFTWARE.
 
 #pragma once
 
+#define UNUSED(x) (void)(x)
+
 #include <string>
 #include <string_view>
 #include <vector>
+#include <variant>
+#include <cstddef>
+#include <array>
 
 namespace css_parser
 {
-template <typename T>
-using Vector = std::vector<T>;
+using Byte = std::byte;
 using String = std::string;
 using StringView = std::string_view;
 using SizeType = std::size_t;
+template <typename T>
+using Vector = std::vector<T>;
+template <typename ... Types>
+using Variant = std::variant<Types...>;
+template <typename T, SizeType size>
+using FixedArray = std::array<T, size>;
 }
